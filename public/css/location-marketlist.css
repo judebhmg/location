@@ -1,0 +1,189 @@
+@import url("http://fonts.googleapis.com/css?family=Oswald:400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600");
+
+body {
+	font: 12px arial;
+	background: url(../images/bg.jpg);
+}
+
+#main-login {
+	width: 400px;
+	margin: 0 auto;
+}
+.login {
+	background: #FF7800;
+	color: #FFF;
+	padding: 10px;
+	border-radius: 5px;
+}
+.login h1 {
+	font:22px 'Oswald', sans-serif;
+}
+.login input {
+	width: 95%;
+	padding: 10px;
+	display: block;
+	font-size: 16px;
+	margin-bottom: 7px;
+	border: none;
+}
+.login button {
+	padding: 5px 20px;
+	margin-right: 10px;
+}
+.login a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 16px;
+}
+.login a:hover {
+	text-decoration: underline;
+}
+#main-content {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.logo {
+	float: left;
+}
+
+.location {
+	float: right;
+	margin-right: 50px;
+	margin-top: 15px;
+}
+
+.location p {
+	padding: 0;
+	margin: 0;
+}
+
+.location h1 {
+	font:700 40px 'Oswald', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.loading {
+	width: 200px;
+	margin: 0 auto;
+	display: none;
+}
+
+
+#menu {
+	padding: 10px 0px 9px 10px;
+}
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#menu ul li  {
+	float: right;
+	margin: 0px 0px 0px 5px;
+}
+
+#menu ul li a {
+	font: 18px Arial;
+	color: #FFF;
+	text-decoration: none;
+	padding: 10px 25px;
+	background: #FF7800;
+	border-radius: 5px 5px 0px 0px;
+}
+#menu ul li a:hover {
+	background: #E16B00;
+}
+#main {
+	border: 1px solid #FF7800;
+	border-radius: 5px 0px 5px 5px;
+	padding: 10px;
+	box-shadow: 5px 5px 5px #CCC;
+	margin-bottom: 100px;
+}
+/**/
+#main .pesquisar {
+	border-bottom: 1px solid #FF7800;
+	padding-bottom: 15px;
+	margin: 10px 0px;
+}
+
+#main h2 {
+	font-size: 22px;
+}
+#main .pesquisar form label {
+	font-size: 16px;
+}
+#main .pesquisar form {
+	width: 290px;
+	margin: 0 auto;
+}
+#main .pesquisar form input[type="text"] {
+	padding: 7px;
+	font-size: 14px;
+}
+#main .pesquisar form button {
+	padding: 5px;
+}
+ul.plus {
+	list-style: none;
+}
+.cpf-consulta {
+	font-size: 16px;
+}
+.box-show {
+	width: 30%;
+	margin: 10px 13px;
+	float: left;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+}
+
+.box-show ul {
+	list-style: none;
+	padding: 10px;
+	margin: 0;
+}
+
+.box-show ul li {
+	margin-bottom: 10px;
+}
+
+
+.box-show span {
+	display: block;
+	font-weight: bold;
+}
+.titulo {
+	font-weight: bold;
+	position: relative;
+	top:-10px;
+	right: 10px;
+	float: right;
+	background: #FFF;
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+.TabbedPanelsContent table {
+	font:14px Arial;
+}
+.TabbedPanelsContent table th {
+	text-align: right;
+	padding-right: 5px;
+}
+.TabbedPanelsContent table td {
+	text-align: left;
+	padding-left: 5px;
+}
+
+.TabbedPanelsContent h1 {
+	border-bottom: 1px solid #CCC;
+	font:600 22px 'Open Sans', sans-serif;
+	padding: 0px 10px;
+	margin: 20px 10px 10px 10px;
+}
+
+.clear {
+	clear: both;
+}
