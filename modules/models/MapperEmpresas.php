@@ -101,7 +101,7 @@ class MapperEmpresas extends Application
         if (!$stmt = sqlsrv_prepare($this->db, $sql, array(&$usuario)) )
             throw new Exception("Statement could not be prepared.", 1);
 
-        if ( !$query = sqlsrv_execute( $stmt ) )
+        if ( !sqlsrv_execute( $stmt ) )
             throw new Exception("Statement could not be prepared", 1);
 
         $row = sqlsrv_fetch_object($stmt);
@@ -137,7 +137,7 @@ class MapperEmpresas extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, array($param)) )
 			throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 1);
 
         $entries   = array();
@@ -167,9 +167,8 @@ class MapperEmpresas extends Application
  
         if (null == $cnpj) {
             $sql = "INSERT INTO location_clientes VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        } else {
-           // $this->getDbTable()->update($data, array('id = ?' => $id));
         }
+        
         $cnpj           = $Emp->cnpj;
         $endereco       = $Emp->endereco;
         $numero         = $Emp->numero;
@@ -203,7 +202,7 @@ class MapperEmpresas extends Application
         if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
             throw new Exception("Statement could not be prepared.", 1);
 
-        if ( !$query = sqlsrv_execute( $stmt ) )
+        if ( !sqlsrv_execute( $stmt ) )
             throw new Exception("Statement could not be prepared", 1);
 
         return true;
@@ -217,7 +216,7 @@ class MapperEmpresas extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, array()) )
 			throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 1);
 
         $entries   = array();

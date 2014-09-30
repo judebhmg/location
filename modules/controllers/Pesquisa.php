@@ -47,7 +47,7 @@ class Pesquisa extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
 			throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 1);
 
 		$row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
@@ -64,7 +64,7 @@ class Pesquisa extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
 			throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 1);
 
 		while($row = sqlsrv_fetch_object($stmt))
@@ -80,7 +80,7 @@ class Pesquisa extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
 			throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 1);
 
 		$row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
@@ -111,7 +111,7 @@ class Pesquisa extends Application
 
 			if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
 				return false;
-			if ( !$query = sqlsrv_execute( $stmt ) )
+			if ( !sqlsrv_execute( $stmt ) )
 				return false;
 
 			return $token;
@@ -178,7 +178,7 @@ class Pesquisa extends Application
 	
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
 			throw new Exception("Statement could not be prepared", 1);	
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be executed", 1);
 
 

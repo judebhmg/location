@@ -65,10 +65,6 @@ class MapperFaturas extends Application
 		$sql     = "SELECT lf.*, lc.razao FROM location_faturas as lf JOIN location_clientes as lc ON lf.empresa = lc.cnpj";
 		$sql     .= " WHERE status=? ";
 
-		$dump[] = $inicio;
-		$dump[] = $final;
-		$dump[] = $empresa;
-
 		$params[] = &$status;
 		if(!empty($empresa))
 		{
@@ -106,7 +102,7 @@ class MapperFaturas extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
 		throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 2);
 
 	       $entries   = array();
@@ -197,7 +193,7 @@ class MapperFaturas extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
 			throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 2);
 
         $entries   = array();

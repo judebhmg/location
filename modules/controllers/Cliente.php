@@ -139,8 +139,6 @@ class Cliente extends Application {
 			$logado   = Session::read('LOGIN');
 			$mppUser  = new MapperUsuarios();
 			$cnpj     = $mppUser->getCNPJ($logado);
-			$continue = true;
-			$enviado  = false;
 
 			if(count($usuarios) > 0)
 			{

@@ -24,7 +24,7 @@ class MapperUsuarios extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, array(&$user)))
             throw new Exception("Statement could not be prepared.", 1);
 
-        if ( !$query = sqlsrv_execute( $stmt ) )
+        if ( !sqlsrv_execute( $stmt ) )
             throw new Exception("Statement could not be prepared", 1);
         
         return sqlsrv_fetch_object($stmt);
@@ -56,7 +56,7 @@ class MapperUsuarios extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params))
             return false;
 
-        if ( !$query = sqlsrv_execute( $stmt ) )
+        if ( !sqlsrv_execute( $stmt ) )
             return false;
 
         return true;
@@ -88,7 +88,7 @@ class MapperUsuarios extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params))
             return false;
 
-        if ( !$query = sqlsrv_execute( $stmt ) )
+        if ( !sqlsrv_execute( $stmt ) )
             return false;
 
         return true;
@@ -115,7 +115,7 @@ class MapperUsuarios extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params))
             throw new Exception("Statement could not be prepared.", 1);
 
-        if ( !$query = sqlsrv_execute( $stmt ) )
+        if ( !sqlsrv_execute( $stmt ) )
             throw new Exception("Statement could not be prepared", 1);
 
         return sqlsrv_fetch_object($stmt);
@@ -128,7 +128,7 @@ class MapperUsuarios extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, array(&$usuario)) )
             throw new Exception("Statement could not be prepared.", 1);
 
-        if ( !$query = sqlsrv_execute( $stmt ) )
+        if ( !sqlsrv_execute( $stmt ) )
             throw new Exception("Statement could not be prepared", 1);
 
         $row = sqlsrv_fetch_object($stmt);
@@ -164,7 +164,7 @@ class MapperUsuarios extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, $params) )
             throw new Exception("Statement could not be prepared.", 1);
 
-        if ( !$query = sqlsrv_execute( $stmt ) )
+        if ( !sqlsrv_execute( $stmt ) )
             throw new Exception("Statement could not be prepared", 1);
 
         return true;
@@ -178,7 +178,7 @@ class MapperUsuarios extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, array($param)) )
 			throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 1);
 
         $entries   = array();
@@ -204,7 +204,7 @@ class MapperUsuarios extends Application
 		if (!$stmt = sqlsrv_prepare($this->db, $sql, array()) )
 			throw new Exception("Statement could not be prepared.", 1);
 
-		if ( !$query = sqlsrv_execute( $stmt ) )
+		if ( !sqlsrv_execute( $stmt ) )
 			throw new Exception("Statement could not be prepared", 1);
 
         $entries   = array();

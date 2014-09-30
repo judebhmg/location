@@ -32,9 +32,9 @@ class Admin extends Application
 			$usuario = $_POST['usuario'];
 			$nome    = $_POST['nome'];
 			$email   = $_POST['email'];
-			$limite   = $_POST['limite'];
+			$limite  = $_POST['limite'];
 			$ativo   = $_POST['ativo'];
-			$tipo   = $_POST['tipo'];
+			$tipo    = $_POST['tipo'];
 			$error   = NULL;
 			$sucesso = NULL;
 
@@ -176,9 +176,6 @@ class Admin extends Application
 			$usuario = $_POST['usuario'];
 			$senha   = $_POST['senha'];
 			$nome    = $_POST['nome'];
-			$email   = $_POST['email'];
-			$empresa = $_POST['empresa'];
-			$limite  = $_POST['limite'];
 			$tipo    = $_POST['tipo'];
 			$error   = NULL;
 
